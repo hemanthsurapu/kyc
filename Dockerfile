@@ -14,7 +14,7 @@ COPY package*.json ./
 # All installations
 RUN npm install || npm install || npm install
 COPY . .
-# RUN npx prisma generate
+RUN npx prisma generate
 
 RUN npm run build
 
@@ -33,7 +33,7 @@ COPY --from=development /usr/app/prisma ./prisma
 
 RUN npm install
 
-# RUN npx prisma generate
+RUN npx prisma generate
 
 COPY --from=development /usr/app/dist ./dist
 
