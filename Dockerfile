@@ -8,7 +8,7 @@ RUN npm config set registry https://registry.npmjs.org/ \
 
 WORKDIR /usr/app
 
-COPY package*.json .
+COPY package*.json ./
 # COPY .env .
 
 # All installations
@@ -23,7 +23,7 @@ RUN npm config set registry https://registry.npmjs.org/
 
 WORKDIR /usr/app
 
-COPY package*.json .
+COPY package*.json ./
 # COPY .env .
 
 # All installations
